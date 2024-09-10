@@ -1,4 +1,4 @@
-package com.bluesource.choicesdk_app.messages
+package com.bluesource.choicesdk_app1.messages
 
 import retrofit2.http.POST
 import retrofit2.http.Query

@@ -1,19 +1,20 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'org.jetbrains.dokka'
+    //id 'org.jetbrains.dokka'
 }
 
-apply plugin: 'com.jaredsburrows.license'
-apply from: "../licenseCheck.gradle"
-apply from: 'release.gradle'
+//apply plugin: 'com.jaredsburrows.license'
+//apply from: "../licenseCheck.gradle"
+//apply from: 'release.gradle'
 
 android {
-    compileSdkVersion 29
+    namespace 'at.bluesource.choicesdk.analytics'
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 24
+        targetSdkVersion 34
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -63,11 +64,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
     // HMS
-    implementation 'com.huawei.hms:hianalytics:6.0.0.300'
+    //implementation 'com.huawei.hms:hianalytics:6.0.0.300'
+    implementation 'com.huawei.hms:hianalytics:6.12.0.300'
 }
 
 
-dokkaHtml {
+/* dokkaHtml {
     outputDirectory.set(file("$buildDir/dokka"))
     dokkaSourceSets {
         configureEach {
@@ -79,5 +81,5 @@ dokkaHtml {
             sourceRoots.from(file("src"))
         }
     }
-}
+}*/
 

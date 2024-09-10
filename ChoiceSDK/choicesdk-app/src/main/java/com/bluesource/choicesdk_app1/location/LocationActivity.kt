@@ -1,4 +1,4 @@
-package com.bluesource.choicesdk_app.location
+package com.bluesource.choicesdk_app1.location
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -17,7 +17,7 @@ import at.bluesource.choicesdk.core.task.listener.OnSuccessListener
 import at.bluesource.choicesdk.location.common.*
 import at.bluesource.choicesdk.location.factory.FusedLocationProviderFactory
 import at.bluesource.choicesdk.location.factory.SettingsClientFactory
-import com.bluesource.choicesdk_app.R
+import at.bluesource.choicesdk.app.R
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.observers.DisposableObserver
@@ -157,7 +157,7 @@ class LocationActivity : AppCompatActivity() {
                     }
                 }
 
-                override fun onError(e: Throwable?) {
+                override fun onError(e: Throwable) {
                     Log.d(TAG, "Observe error: ${e?.message}", e)
                 }
             }

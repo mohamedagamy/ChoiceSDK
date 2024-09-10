@@ -1,4 +1,4 @@
-package com.bluesource.choicesdk_app.biometrics
+package com.bluesource.choicesdk_app1.biometrics
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
-import com.bluesource.choicesdk_app.R
+import at.bluesource.choicesdk.app.R
 import java.util.concurrent.Executor
 
 class BiometricsActivity : AppCompatActivity() {

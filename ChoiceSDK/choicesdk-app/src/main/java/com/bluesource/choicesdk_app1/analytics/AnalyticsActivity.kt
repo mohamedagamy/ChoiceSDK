@@ -1,4 +1,4 @@
-package com.bluesource.choicesdk_app.analytics
+package com.bluesource.choicesdk_app1.analytics
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import at.bluesource.choicesdk.analytics.common.Analytics
 import at.bluesource.choicesdk.analytics.factory.AnalyticsFactory
-import com.bluesource.choicesdk_app.R
+import at.bluesource.choicesdk.app.R
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.observers.DisposableObserver
@@ -50,7 +50,7 @@ class AnalyticsActivity : AppCompatActivity() {
                 textView.text = "AppInstanceId: $result"
             }
 
-            override fun onError(e: Throwable?) {
+            override fun onError(e: Throwable) {
                 Log.d(TAG, "analytics onError ${e?.message}")
             }
         }

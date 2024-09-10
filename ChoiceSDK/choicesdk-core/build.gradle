@@ -1,19 +1,20 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'org.jetbrains.dokka'
+    //id 'org.jetbrains.dokka'
 }
 
-apply plugin: 'com.jaredsburrows.license'
-apply from: "../licenseCheck.gradle"
-apply from: 'release.gradle'
+//apply plugin: 'com.jaredsburrows.license'
+//apply from: "../licenseCheck.gradle"
+//apply from: 'release.gradle'
 
 android {
-    compileSdkVersion 29
+    namespace 'at.bluesource.choicesdk.core'
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 24
+        targetSdkVersion 34
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -52,11 +53,12 @@ dependencies {
     implementation 'com.google.android.gms:play-services-base:17.6.0'
 
     // HMS
-    implementation "com.huawei.hms:base:5.3.0.301"
+    //implementation "com.huawei.hms:base:5.3.0.301"
+    implementation "com.huawei.hms:base:6.11.0.302"
 
 }
 
-dokkaHtml {
+/* dokkaHtml {
     outputDirectory.set(file("$buildDir/dokka"))
     dokkaSourceSets {
         configureEach {
@@ -68,4 +70,4 @@ dokkaHtml {
             sourceRoots.from(file("src"))
         }
     }
-}
+}*/

@@ -2,19 +2,20 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-parcelize'
-    id 'org.jetbrains.dokka'
+    //id 'org.jetbrains.dokka'
 }
 
-apply plugin: 'com.jaredsburrows.license'
-apply from: "../licenseCheck.gradle"
-apply from: 'release.gradle'
+//apply plugin: 'com.jaredsburrows.license'
+//apply from: "../licenseCheck.gradle"
+//apply from: 'release.gradle'
 
 android {
-    compileSdkVersion 29
+    namespace 'at.bluesource.choicesdk.maps'
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 24
+        targetSdkVersion 34
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -64,12 +65,13 @@ dependencies {
     implementation 'com.google.maps.android:android-maps-utils:0.5'
 
     // HMS
-    implementation 'com.huawei.hms:maps:5.3.0.300'
+    //implementation 'com.huawei.hms:maps:5.3.0.300'
+    implementation 'com.huawei.hms:maps:6.11.2.301'
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1"
 }
 
 
-dokkaHtml {
+/* dokkaHtml {
     outputDirectory.set(file("$buildDir/dokka"))
     dokkaSourceSets {
         configureEach {
@@ -81,4 +83,4 @@ dokkaHtml {
             sourceRoots.from(file("src"))
         }
     }
-}
+}*/

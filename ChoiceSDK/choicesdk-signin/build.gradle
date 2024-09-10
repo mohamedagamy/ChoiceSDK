@@ -1,19 +1,20 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'org.jetbrains.dokka'
+    //id 'org.jetbrains.dokka'
 }
 
-apply plugin: 'com.jaredsburrows.license'
-apply from: "../licenseCheck.gradle"
-apply from: 'release.gradle'
+//apply plugin: 'com.jaredsburrows.license'
+//apply from: "../licenseCheck.gradle"
+//apply from: 'release.gradle'
 
 android {
-    compileSdkVersion 29
+    namespace 'at.bluesource.choicesdk.signin'
+    compileSdkVersion 30
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 24
+        targetSdkVersion 34
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -62,10 +63,11 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
 
     // HMS
-    implementation 'com.huawei.hms:hwid:5.3.0.302' // account kit
+    //implementation 'com.huawei.hms:hwid:5.3.0.302' // account kit
+    implementation 'com.huawei.hms:hwid:6.12.0.300'
 }
 
-dokkaHtml {
+/* dokkaHtml {
     outputDirectory.set(file("$buildDir/dokka"))
     dokkaSourceSets {
         configureEach {
@@ -77,4 +79,4 @@ dokkaHtml {
             sourceRoots.from(file("src"))
         }
     }
-}
+}*/
